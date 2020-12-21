@@ -123,6 +123,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="listA.h" />
+    <ClInclude Include="listB.h" />
+    <ClInclude Include="queue.h" />
+    <ClInclude Include="tree.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="listA.c" />
+    <ClCompile Include="listB.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="Q1b.c" />
+    <ClCompile Include="Q2a.c" />
+    <ClCompile Include="Q2b.c" />
+    <ClCompile Include="queue.c" />
+    <ClCompile Include="tree.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
