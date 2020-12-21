@@ -7,7 +7,7 @@ typedef struct node
 }NODE;
 
 //funcs:
-void Reorder(NODE* head);
+void ReorderB(NODE* head);
 
 //questions:
 void Q2b();

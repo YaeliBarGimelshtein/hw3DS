@@ -1,6 +1,6 @@
 #include "listB.h"
 
-void Reorder(NODE* head)
+void ReorderB(NODE* head)
 {
 
 }
