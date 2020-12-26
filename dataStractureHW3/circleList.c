@@ -1,5 +1,6 @@
 #include "circleList.h"
-#include <cstddef>
+#include <stdlib.h>
+#include <stdio.h>
 
 NODE_Circle* createListCircle() //create empty list
 {
@@ -28,7 +29,7 @@ void insertToListCircle(NODE_Circle** L, int x) //inserts item x at the end of t
 	
 }
 
-void printListCircle(NODE_Circle* L) //prints the content of the queue
+void printListCircle(NODE_Circle* L) //prints the content of the list
 {
 	while (L->next->key != -1)
 	{
@@ -40,11 +41,14 @@ void printListCircle(NODE_Circle* L) //prints the content of the queue
 
 void freeListCircle(NODE_Circle* L)
 {
-	while (L->next->key != -1)
+	if (L == NULL)
+		return;
+	L = L->next;
+	while (L->key != -1)
 	{
-		NODE_Circle* helper = L->next->next;
-		free(L->next);
-		L->next = helper;
+		NODE_Circle* helper = L->next;
+		free(L);
+		L = helper;
 	}
-	free(L);
+	free(L->next);
 }

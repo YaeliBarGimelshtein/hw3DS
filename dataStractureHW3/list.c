@@ -92,8 +92,12 @@ NODE* ReorderA(NODE* head)
 	if(endOfOddList!=NULL)
 	{
 		endOfOddList->next = evenList;
+		return oddList;
 	}
-	return oddList;
+	else
+	{
+		return evenList;
+	}
 }
 //2.b
 void ReorderB(NODE** head)
@@ -143,6 +147,10 @@ void ReorderB(NODE** head)
 	{
 		endOfOdd->next = startOfEven;
 		*head = startOfOdd;
+		if (endOfEven != NULL)
+		{
+			endOfEven->next = NULL;
+		}
 	}
 	else
 	{

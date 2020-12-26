@@ -1,5 +1,6 @@
 #include "tree.h"
-#include <cstddef>
+#include <stdlib.h>
+#include <stdio.h>
 
 void rangeSearch(tree_ptr t, itemType u, itemType v)
 {
